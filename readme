@@ -1,2 +1,46 @@
+- Descripción del programa:
+
+Esta aplicación móvil fue desarrollada en Android Studio utilizando Kotlin y Jetpack Compose.
+El objetivo principal es consumir la PokeAPI
+ para mostrar información de distintos Pokémon.
+
+- Funcionalidades principales
+
+- Lista de Pokémon:
+Se obtiene un listado de los primeros 100 Pokémon desde la API.
+Cada Pokémon se muestra en una tarjeta con su nombre e imagen, siguiendo un diseño basado en LazyColumn y componentes de Material 3.
+
+- Detalle de Pokémon:
+Al seleccionar un Pokémon de la lista, se navega a una pantalla de detalle donde se muestran distintas imágenes (sprites) del Pokémon, incluyendo su versión frontal, trasera y variaciones “shiny”.
+
+- Arquitectura básica:
+
+RetrofitClient → Configuración de Retrofit y cliente HTTP.
+
+PokeApi → Interfaz con los endpoints de la API.
+
+PokemonRepository → Capa intermedia para manejar la lógica de obtención de datos.
+
+ViewModel → Manejo de estados y llamadas a la API con corrutinas (viewModelScope).
+
+Composable Screens → Pantallas de lista y detalle construidas con Jetpack Compose.
+
+- Navegación:
+Se implementó Navigation Compose para la transición entre la lista principal y la vista de detalles.
+
+Tecnologías utilizadas
+
+Kotlin
+
+Jetpack Compose (UI declarativa)
+
+Navigation Compose
+
+Retrofit + Gson (consumo de API REST)
+
+Coroutines (para llamadas asíncronas)
+
+Coil (carga de imágenes)
+
 adjunto algunas imagenes del como funciona mi programa 
 https://drive.google.com/drive/folders/1-kFtUkNSpNSSj8cOsTHS1jw_Q7D86S7W?usp=drive_link
