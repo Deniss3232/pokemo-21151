@@ -27,8 +27,8 @@ class MainViewModel(
         viewModelScope.launch {
             val result = repo.getPokemonList(limit)
             _state.value = result.fold(
-                onSuccess = { UiState.Success(it) },
-                onFailure = { UiState.Error(it.message ?: "Error desconocido") }
+                onSuccess = { list: List<String> -> UiState.Success(list) },
+                onFailure = { e: Throwable -> UiState.Error(e.message ?: "Error desconocido") }
             )
         }
     }
